@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -21,6 +22,7 @@ class MainActivity : AppCompatActivity() {
     var lefttoright:Animation? = null
     var bgprogress: View? = null
     var bgprogresstop:android.view.View? = null
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -34,7 +36,7 @@ class MainActivity : AppCompatActivity() {
         titlepage = findViewById<View>(R.id.titlepage) as TextView
         subtitlepage = findViewById<View>(R.id.subtitlepage) as TextView
         btnexercise = findViewById<View>(R.id.btnexercise) as TextView
-        imgpage = findViewById<View>(R.id.imgpage) as ImageView
+        imgpage = findViewById<View>(R.id.img_1) as ImageView
         bgprogress = findViewById(R.id.bgprogress) as View
         bgprogresstop = findViewById(R.id.bgprogresstop) as View
 

@@ -5,10 +5,7 @@ import android.os.CountDownTimer
 import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
-import android.widget.ImageView
-import android.widget.LinearLayout
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import java.util.*
 
@@ -35,12 +32,10 @@ class StartWorkAct:AppCompatActivity() {
     var ttbone:Animation? = null
     var ttbtwo:Animation? = null
     var alphago:Animation? = null
-
+    val button: Button = findViewById(R.id.start)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_start_work)
-
-        //Load Animations
         btthree = AnimationUtils.loadAnimation(this, R.anim.btthree)
         bttfour = AnimationUtils.loadAnimation(this, R.anim.bttfour)
         ttbone = AnimationUtils.loadAnimation(this, R.anim.ttbone)
@@ -64,7 +59,9 @@ class StartWorkAct:AppCompatActivity() {
         divpage!!.startAnimation(ttbtwo)
         timerValue!!.startAnimation(alphago)
         imgTimer!!.startAnimation(alphago)
-        startTimer()
+        button.setOnClickListener{
+            startTimer()
+        }
     }
 
     private fun startTimer() {
@@ -72,10 +69,12 @@ class StartWorkAct:AppCompatActivity() {
             override fun onTick(millisUntilFinished: Long) {
                 mTimeLeftInMillis = millisUntilFinished
                 updateCountDownText()
+                button.text="Stop"
             }
 
             override fun onFinish() {
                 Toast.makeText(applicationContext, "Done!", Toast.LENGTH_SHORT).show()
+                button.text="Start"
             }
         }.start()
         mTimerRunning = true

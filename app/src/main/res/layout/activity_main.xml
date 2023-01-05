@@ -5,21 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-    <ImageView
-        android:id="@+id/imgpage"
-        android:layout_width="409dp"
-        android:layout_height="386dp"
-        android:layout_marginEnd="2dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/img" />
 
     <TextView
         android:id="@+id/titlepage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="44dp"
         android:gravity="center"
         android:lineSpacingExtra="1dp"
         android:text="If you Think \n Lifting is Dangerous, \n try being Weak."
@@ -29,33 +20,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgpage" />
-
-    <TextView
-        android:id="@+id/subtitlepage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:gravity="center"
-        android:lineSpacingExtra="3dp"
-        android:text="Continue the Struggle \n to get maximum Output"
-        android:textAlignment="center"
-        android:textColor="#3A3A3A"
-        android:textSize="20sp"
-        app:fontFamily="sans-serif"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titlepage" />
+        app:layout_constraintTop_toBottomOf="@+id/img_1" />
 
     <View
         android:id="@+id/bgprogress"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="#9C27B0"
+        android:layout_marginTop="192dp"
+        android:background="@color/design_default_color_primary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titlepage" />
 
     <View
         android:id="@+id/bgprogresstop"
@@ -78,10 +54,32 @@
         android:gravity="center"
         android:text="START WORKOUT"
         android:textAlignment="center"
-        android:textColor="#03A9F4"
+        android:textColor="@color/white"
         android:textSize="22sp"
         app:fontFamily="sans-serif-black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="115dp"
+        android:layout_marginBottom="56dp"
+        app:layout_constraintBottom_toTopOf="@+id/img_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cool_rock" />
+
+    <ImageView
+        android:id="@+id/img_1"
+        android:layout_width="219dp"
+        android:layout_height="161dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="212dp"
+        android:rotation="-40"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/rock" />
 </androidx.constraintlayout.widget.ConstraintLayout>
