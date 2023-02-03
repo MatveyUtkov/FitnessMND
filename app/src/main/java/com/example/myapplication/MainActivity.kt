@@ -2,15 +2,20 @@ package com.example.myapplication
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.content.IntentFilter
 import android.os.Bundle
 import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
+    var mText: TextView? = null
+    var mImageView: ImageView? = null
+    var mButton: Button? = null
     var titlepage: TextView? = null
     var subtitlepage:TextView? = null
     var btnexercise:TextView? = null
@@ -26,6 +31,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        mImageView=findViewById(R.id.bicep)
         animimgpage = AnimationUtils.loadAnimation(this, R.anim.animimgpage)
         bttone = AnimationUtils.loadAnimation(this, R.anim.bttone)
         bttwo = AnimationUtils.loadAnimation(this, R.anim.bttwo)
@@ -34,7 +40,6 @@ class MainActivity : AppCompatActivity() {
 
 
         titlepage = findViewById<View>(R.id.titlepage) as TextView
-        subtitlepage = findViewById<View>(R.id.subtitlepage) as TextView
         btnexercise = findViewById<View>(R.id.btnexercise) as TextView
         imgpage = findViewById<View>(R.id.img_1) as ImageView
         bgprogress = findViewById(R.id.bgprogress) as View
@@ -42,8 +47,6 @@ class MainActivity : AppCompatActivity() {
 
         imgpage!!.startAnimation(animimgpage)
         titlepage!!.startAnimation(bttone)
-        subtitlepage!!.startAnimation(bttone)
-
         btnexercise!!.startAnimation(btthree)
         bgprogress!!.startAnimation(bttwo)
         bgprogresstop!!.startAnimation(lefttoright)
@@ -52,5 +55,10 @@ class MainActivity : AppCompatActivity() {
             a.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
             startActivity(a)
         }
+        val notificationRecieve=NotificationRecieve()
+        val filter=IntentFilter()
+        filter.addAction(Intent.ACTION_POWER_CONNECTED)
+        filter.addAction(Intent.ACTION_POWER_DISCONNECTED)
+        this.registerReceiver(notificationRecieve, filter)
     }
 }

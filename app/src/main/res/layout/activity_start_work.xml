@@ -4,7 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:id="@+id/StartWorkOutAct">
 
     <LinearLayout
         android:id="@+id/fitone"
@@ -18,6 +19,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 <ImageView
+    android:id="@+id/WorkOutImg"
     android:layout_width="110dp"
     android:layout_height="70dp"
     android:src="@drawable/chest"
@@ -140,7 +142,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="157dp"
-        android:layout_marginTop="43dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="160dp"
         android:text="Start"
         app:layout_constraintEnd_toEndOf="parent"

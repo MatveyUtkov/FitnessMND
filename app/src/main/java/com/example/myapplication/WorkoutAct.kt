@@ -42,7 +42,6 @@ class WorkoutAct: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_workout)
-
         bttone = AnimationUtils.loadAnimation(this, R.anim.bttone)
         bttwo = AnimationUtils.loadAnimation(this, R.anim.bttwo)
         bttfour = AnimationUtils.loadAnimation(this, R.anim.bttfour)
@@ -52,8 +51,6 @@ class WorkoutAct: AppCompatActivity() {
         btteight = AnimationUtils.loadAnimation(this, R.anim.btteight)
         titlepage = findViewById<View>(R.id.titlepage) as TextView
         subtitlepage = findViewById<View>(R.id.subtitlepage) as TextView
-        intropage = findViewById<View>(R.id.intropage) as TextView
-        subintropage = findViewById<View>(R.id.subintropage) as TextView
         btnexercise = findViewById<View>(R.id.btnexercise) as TextView
         fitonetitle = findViewById<View>(R.id.fitonetitle) as TextView
         fitonedesc = findViewById<View>(R.id.fitonedesc) as TextView
@@ -78,8 +75,6 @@ class WorkoutAct: AppCompatActivity() {
         titlepage!!.startAnimation(bttone)
         subtitlepage!!.startAnimation(bttone)
         divpage!!.startAnimation(bttone)
-        intropage!!.startAnimation(bttwo)
-        subintropage!!.startAnimation(bttwo)
         fitone!!.startAnimation(bttwo)
         fittwo!!.startAnimation(bttfour)
         fitthree!!.startAnimation(bttfive)
@@ -87,4 +82,5 @@ class WorkoutAct: AppCompatActivity() {
         btnexercise!!.startAnimation(btteight)
         bgprogress!!.startAnimation(bttseven)
     }
+
 }

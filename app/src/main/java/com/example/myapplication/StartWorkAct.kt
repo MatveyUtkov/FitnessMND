@@ -8,9 +8,9 @@ import android.view.animation.AnimationUtils
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import java.util.*
-
+import com.example.myapplication.databinding.ActivityStartWorkBinding
 class StartWorkAct:AppCompatActivity() {
-
+    private lateinit var binding: ActivityStartWorkBinding
     var intropage: TextView? = null
     var subintropage:TextView? = null
     var fitonetitle:TextView? = null
@@ -32,7 +32,7 @@ class StartWorkAct:AppCompatActivity() {
     var ttbone:Animation? = null
     var ttbtwo:Animation? = null
     var alphago:Animation? = null
-    val button: Button = findViewById(R.id.start)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_start_work)
@@ -47,6 +47,7 @@ class StartWorkAct:AppCompatActivity() {
         fitonedesc = findViewById<View>(R.id.fitonedesc) as TextView
         timerValue = findViewById<View>(R.id.timerValue) as TextView
         btnexercise = findViewById<View>(R.id.btnexercise) as TextView
+        val button: Button = findViewById(R.id.start)
         divpage = findViewById(R.id.divpage) as View
         bgprogress = findViewById(R.id.bgprogress) as View
         fitone = findViewById<View>(R.id.fitone) as LinearLayout
@@ -69,11 +70,13 @@ class StartWorkAct:AppCompatActivity() {
             override fun onTick(millisUntilFinished: Long) {
                 mTimeLeftInMillis = millisUntilFinished
                 updateCountDownText()
+                val button: Button = findViewById(R.id.start)
                 button.text="Stop"
             }
 
             override fun onFinish() {
                 Toast.makeText(applicationContext, "Done!", Toast.LENGTH_SHORT).show()
+                val button: Button = findViewById(R.id.start)
                 button.text="Start"
             }
         }.start()
