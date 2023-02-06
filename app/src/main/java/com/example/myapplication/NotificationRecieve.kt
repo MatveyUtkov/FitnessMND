@@ -16,12 +16,22 @@ class NotificationRecieve:BroadcastReceiver() {
     private var isChannelCreated=false
     private lateinit var channel:NotificationChannel
     private var Even_Channel_id="Even_Channel_id"
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onReceive(context: Context?, intent: Intent?) {
         this.context=context
+        val action = intent?.action
+        when (action) {
+            Intent.ACTION_POWER_CONNECTED -> {
+                notifyUser()
+            }
+            Intent.ACTION_POWER_DISCONNECTED ->  {
+
+            }
+        }
 
     }
     @RequiresApi(Build.VERSION_CODES.O)
-    private fun notifyUser(){
+    fun notifyUser(){
         if(!isChannelCreated){
             createChannel()
         }

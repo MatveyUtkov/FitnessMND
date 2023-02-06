@@ -64,7 +64,6 @@ class StartWorkAct:AppCompatActivity() {
             startTimer()
         }
     }
-
     private fun startTimer() {
         countDownTimer = object : CountDownTimer(mTimeLeftInMillis, 1000) {
             override fun onTick(millisUntilFinished: Long) {
@@ -75,8 +74,9 @@ class StartWorkAct:AppCompatActivity() {
             }
 
             override fun onFinish() {
-                Toast.makeText(applicationContext, "Done!", Toast.LENGTH_SHORT).show()
                 val button: Button = findViewById(R.id.start)
+                Toast.makeText(applicationContext, "Done!", Toast.LENGTH_SHORT).show()
+
                 button.text="Start"
             }
         }.start()
