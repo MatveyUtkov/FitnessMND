@@ -54,8 +54,7 @@ class MainActivity : AppCompatActivity() {
         bgprogress!!.startAnimation(bttwo)
         bgprogresstop!!.startAnimation(lefttoright)
         btnexercise!!.setOnClickListener {
-            val a = Intent(this@MainActivity, WorkoutAct::class.java)
-            a.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
+            val a = Intent(this, Workout_Categories::class.java)
             startActivity(a)
         }
         val notificationRecieve=NotificationRecieve()

@@ -79,7 +79,9 @@ class StartWorkAct:AppCompatActivity() {
 
                 button.text="Start"
             }
+
         }.start()
+
         mTimerRunning = true
     }
 
