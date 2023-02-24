@@ -3,16 +3,12 @@
     <string name="get_started_with_wrkt">Click to Get Started</string>
     <string name="mainScreenWelcome">What Do You Want To Learn About Today?</string>
     <string name="backButtonLabel">Back to Categories</string>
-
-    <!-- Category Strings -->
-    <string name="nutritionCategory">WRKT Nutrition Category</string>
-    <string name="sportsCategory">WRKT Sports Category</string>
-    <string name="cardioCategory">WRKT Cardio Category</string>
-    <string name="stretchesAndWarmUpsCategory">WRKT Stretches and Warm-Ups Category</string>
-    <string name="strengthTrainingCategory">WRKT Strength Training Category</string>
-    <string name="mindfulnessAndMeditationCategory">WRKT Mindfulness and Meditation Category</string>
-
-    <!-- Stretching Options Overview & Links Strings -->
+    <string name="nutritionCategory">FITA Nutrition Category</string>
+    <string name="sportsCategory">FITA Sports Category</string>
+    <string name="cardioCategory">FITA Cardio Category</string>
+    <string name="stretchesAndWarmUpsCategory">FITA Stretches and Warm-Ups Category</string>
+    <string name="strengthTrainingCategory">FITA Strength Training Category</string>
+    <string name="mindfulnessAndMeditationCategory">FITA Mindfulness and Meditation Category</string>
     <string name="stretchingOverview">Stretching and warming up are critical to the overall success of any workout. There are many different types of stretching such as:</string>
 
     <string-array name="stretchingOptions">
@@ -21,25 +17,18 @@
         <item><a href="">Forward bend</a></item>
         <item><a href="">Seated spinal twist</a></item>
     </string-array>
-
-    <!-- Strength Training Overview & Links Strings -->
     <string-array name="strengthOptions">
         <item><a href="">Workout 1</a></item>
         <item><a href="">Workout 2</a></item>
     </string-array>
 
     <string name="strengthOverview">Strength training involves increasing muscle mass by lifting heavy weights. There are many different strength training exercises such as:</string>
-
-    <!-- Cardio Overview & Links Strings -->
     <string name="cardioOverview">Cardio is the perfect fat-burning exercise to keep your heart healthy. There are many different types of cardio such as:</string>
-
     <string-array name="cardioOptions">
         <item><a href="">Top 10 Sprints</a></item>
         <item><a href="">1st Marathon Training</a></item>
         <item><a href="">Advanced Jump Rope</a></item>
     </string-array>
-
-    <!-- Sports Overview & Links Strings -->
     <string name="sportsOverview">Sports are fun ways to get exercise and get a workout in. There are many different sports like:</string>
 
     <string-array name="sportsOptions">
@@ -47,8 +36,6 @@
         <item><a href="">Basketball</a></item>
         <item><a href="">Tennis</a></item>
     </string-array>
-
-    <!-- Mindfulness & Meditation Overview & Links Strings -->
     <string name="mindfulnessAndMeditationOverview">Mindfulness and meditation are critical for reducing the stresses of everyday life. There are many different daily exercises like:</string>
 
     <string-array name="mindfulness_and_meditationOptions">
@@ -56,8 +43,6 @@
         <item><a href="">Self Awareness</a></item>
         <item><a href="">Easy Meditation Exercises</a></item>
     </string-array>
-
-    <!-- Nutrition Overview & Links Strings -->
     <string name="nutritionOverview">Nutrition is more important than working out and goes hand-in-hand for overall success. There are many different types of stretching such as:</string>
 
     <string-array name="nutritionOptions">
@@ -65,8 +50,6 @@
         <item><a href="">Super Food Snacks</a></item>
         <item><a href="">Nutrition Hacks</a></item>
     </string-array>
-
-    <!-- Toast Message Strings -->
     <string name="toastNutrition">Nutrition</string>
     <string name="toastMindfulnessAndMeditation"><![CDATA[Mindfulness & Meditation]]></string>
     <string name="toastSports">Sports</string>
